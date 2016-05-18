@@ -57,3 +57,21 @@ function isEmptyObject(obj) {
 function isFunction(fn) {
   return fn.constructor === Function.constructor;
 }
+
+/**
+ * Check for even number
+ * @param  {Number}  num
+ * @return {Boolean} [description]
+ */
+function isEven(num) {
+  return 'number' === typeof num && !isNaN(num) && !(num & 1);
+}
+
+/**
+ * Check for odd num
+ * @param  {Number}  num
+ * @return {Boolean}
+ */
+function isOdd(num) {
+  return 'number' === typeof num && !isNaN(num) && (num & 1);
+}
