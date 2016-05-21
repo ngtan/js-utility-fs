@@ -19,3 +19,25 @@ function isLeapYear(year) {
 function getDateInFeb(year) {
   return isLeapYear(year) ? 29 : 28;
 }
+
+/**
+ * Get month name
+ * @param  {Number} month
+ * @return {String}
+ */
+function getMonthName(month) {
+  return 'number' === typeof month && !isNaN(month) && [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ][month];
+}
