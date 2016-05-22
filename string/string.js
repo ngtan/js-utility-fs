@@ -8,3 +8,13 @@
 function replaceAll(search, replace, subject) {
   return subject.replace(new RegExp(search, 'g'), replace);
 }
+
+/**
+ * count words in string
+ * @param  {String} str
+ * @return {Number}
+ */
+function countWords(str) {
+  return str.constructor === ''.constructor &&
+         str.replace(/(^\s*)|(\s*$)/gi, '').replace(/\s+/gi, ' ').split(' ').length;
+}
