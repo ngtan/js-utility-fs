@@ -6,7 +6,8 @@
  * @return {String}
  */
 function replaceAll(search, replace, subject) {
-  return subject.replace(new RegExp(search, 'g'), replace);
+  return subject.constructor === ''.constructor &&
+         subject.replace(new RegExp(search, 'g'), replace);
 }
 
 /**
