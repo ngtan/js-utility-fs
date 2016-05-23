@@ -30,3 +30,16 @@ function ucfirst(str) {
          str.trim() &&
          str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+/**
+ * Uppercase the first character of each word in a string
+ * @param  {String} str
+ * @return {String}
+ */
+function ucwords(str) {
+  return str.constructor === ''.constructor &&
+         str.trim() &&
+         str.toLowerCase().replace(/\b[a-z]/g, function(char) {
+           return char.toUpperCase();
+         });
+}
