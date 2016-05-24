@@ -43,3 +43,12 @@ function ucwords(str) {
            return char.toUpperCase();
          });
 }
+
+/**
+ * Get string length
+ * @param  {String} str
+ * @return {Number}
+ */
+function strlen(str) {
+  return str.constructor === ''.constructor && str.length;
+}
