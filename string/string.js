@@ -52,3 +52,12 @@ function ucwords(str) {
 function strlen(str) {
   return str.constructor === ''.constructor && str.length;
 }
+
+/**
+ * Reverse a string
+ * @param  {String} str
+ * @return {String}
+ */
+function strrev(str) {
+  return str.constructor === ''.constructor && str.split('').reverse().join('');
+}
