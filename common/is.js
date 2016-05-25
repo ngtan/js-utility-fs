@@ -42,6 +42,10 @@ function isObject(obj) {
 function isEmptyObject(obj) {
   var key;
 
+  if (obj.constructor !== {}.constructor) {
+    return;
+  }
+
   for (key in obj) {
     return false;
   }
