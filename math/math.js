@@ -14,7 +14,10 @@ function getRandInt(min, max) {
  * @return {Number}
  */
 function factorial(num) {
-  if (0 === num) {
+  if (0 > num) {
+    return -1;
+  }
+  else if (0 === num) {
     return 1;
   }
 
