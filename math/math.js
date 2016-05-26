@@ -23,3 +23,20 @@ function factorial(num) {
 
   return num * factorial(num - 1);
 }
+
+/**
+ * sum
+ * @param  {Number} arguments
+ * @return {Number}
+ */
+function sum() {
+  var res = 0;
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    if ('number' === typeof arguments[i] && !isNaN(arguments[i])) {
+      res += arguments[i];
+    }
+  }
+
+  return res;
+}
