@@ -49,3 +49,12 @@ function sum() {
 function toRad(deg) {
   return 'number' === typeof deg && !isNaN(deg) && deg * Math.PI / 180;
 }
+
+/**
+ * Convert radians to numeric degrees
+ * @param  {Number} rad
+ * @return {Number}
+ */
+function toDeg(rad) {
+  return rad * 180 / Math.PI;
+}
