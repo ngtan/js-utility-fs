@@ -58,3 +58,12 @@ function toRad(deg) {
 function toDeg(rad) {
   return rad * 180 / Math.PI;
 }
+
+/**
+ * Check numer is square
+ * @param  {Number}  num
+ * @return {Boolean}
+ */
+function isSquare(num) {
+  return 'number' === typeof num && !isNaN(num) && Math.sqrt(num) === Math.floor(Math.sqrt(num));
+}
