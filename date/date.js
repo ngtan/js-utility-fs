@@ -41,3 +41,20 @@ function getMonthName(month) {
     'December'
   ][month];
 }
+
+/**
+ * Get week name
+ * @param  {Number} day
+ * @return {String}
+ */
+function getNameInWeek(day) {
+  return 'number' === typeof day && !isNaN(day) && [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ][day];
+}
