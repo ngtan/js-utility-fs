@@ -72,6 +72,14 @@ function isDate(date) {
 }
 
 /**
+ * Check for regexp
+ * @param  {RegExp}  reg
+ * @return {Boolean}
+ */
+function isRegExp(reg) {
+  return reg instanceof RegExp || '[object RegExp]' === Object.prototype.toString.call(reg);
+}
+/**
  * Check for even number
  * @param  {Number}  num
  * @return {Boolean} [description]
