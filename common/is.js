@@ -63,6 +63,15 @@ function isFunction(fn) {
 }
 
 /**
+ * Check for date
+ * @param  {Date}  date
+ * @return {Boolean}
+ */
+function isDate(date) {
+  return date instanceof Date || '[object Date]' === Object.prototype.toString.call(date);
+}
+
+/**
  * Check for even number
  * @param  {Number}  num
  * @return {Boolean} [description]
