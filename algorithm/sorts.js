@@ -27,3 +27,27 @@ function selectionSort(arr) {
 
   return arr;
 }
+
+/**
+ * Bubble sort
+ * @param  {Array} arr
+ * @return {Array}
+ */
+function bubbleSort(arr) {
+  var i, j,
+      il, jl,
+      l = arr.length,
+      tmp;
+
+  for (i = 0, il = l; i < il; i++) {
+    for (j = 0, jl = l - 1; j < jl; j++) {
+      if (arr[j] > arr[j + 1]) {
+        tmp = arr[j + 1];
+        arr[j + 1] = arr[j];
+        arr[j] = tmp;
+      }
+    }
+  }
+
+  return arr;
+}
