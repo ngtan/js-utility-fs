@@ -51,3 +51,24 @@ function bubbleSort(arr) {
 
   return arr;
 }
+
+/**
+ * Insert sort
+ * @param  {Array} arr
+ * @return {Array}
+ */
+function insertSort(arr) {
+  var i, j,
+      l, index;
+
+  for (i = 0, l = arr.length; i < l; i++) {
+    index = arr[i];
+
+    for (j = i; j > 0 && arr[j - 1] > index; j--) {
+      arr[j] = arr[j - 1];
+    }
+    arr[j] = index;
+  }
+
+  return arr;
+}
