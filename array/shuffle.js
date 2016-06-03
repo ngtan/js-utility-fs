@@ -7,7 +7,7 @@ function shuffle(arr) {
   var rand, temp;
 
   if (arr.constructor !== [].constructor) {
-    return;
+    throw new TypeError('Argument must be an array.');
   }
 
 
