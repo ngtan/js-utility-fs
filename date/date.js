@@ -85,7 +85,7 @@ function getDaysInMonth(year, month) {
     case 11:
       return 30;
     case 2:
-      return getDateInFeb();
+      return getDateInFeb(year);
     default:
       return -1;
   }
