@@ -8,6 +8,10 @@ function getPropsLength(obj) {
       name,
       fnConstructor = Function.constructor;
 
+  if ({}.constructor !== obj.constructor) {
+    throw new TypeError('Argument must be an object.');
+  }
+
   for (name in obj) {
     if (obj.hasOwnProperty(name) && name.constructor !== fnConstructor) {
       len++;
