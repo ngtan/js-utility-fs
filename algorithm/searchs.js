@@ -5,6 +5,14 @@
  * @return {Number} position
  */
 function linearSearch(arr, find) {
+  if ([].constructor !== arr.constructor) {
+    throw new TypeError('First argument must be an array.');
+  }
+
+  if (!('number' === typeof find && !isNaN(find))) {
+    throw new TypeError('Second argument must be a number.');
+  }
+
   for (var i = 0, l = arr.length; i < l; i++) {
     if (arr[i] === find) {
       return i;
