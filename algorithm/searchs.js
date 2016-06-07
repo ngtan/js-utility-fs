@@ -33,6 +33,14 @@ function binarySearch(arr, find) {
       right = arr.length - 1,
       mid;
 
+  if ([].constructor !== arr.constructor) {
+    throw new TypeError('First argument must be an array.');
+  }
+
+  if (!('number' === typeof find && !isNaN(find))) {
+    throw new TypeError('Second argument must be a number.');
+  }
+
   while (left <= right) {
     mid =  Math.floor((left + right) / 2);
     if (arr[mid] === find) {
