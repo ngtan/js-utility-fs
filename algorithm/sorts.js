@@ -43,6 +43,10 @@ function bubbleSort(arr) {
       l = arr.length,
       tmp;
 
+  if ([].constructor !== arr.constructor) {
+    throw new TypeError('Argument must be an array.');
+  }
+
   for (i = 0, il = l; i < il; i++) {
     for (j = 0, jl = l - 1; j < jl; j++) {
       if (arr[j] > arr[j + 1]) {
