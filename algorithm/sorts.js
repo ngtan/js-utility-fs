@@ -9,6 +9,10 @@ function selectionSort(arr) {
       minIndex,
       tmp;
 
+  if ([].constructor !== arr.constructor) {
+    throw new TypeError('Argument must be an array.');
+  }
+
   for (i = 0, il = arr.length - 1; i < il; i++) {
     minIndex = i;
 
