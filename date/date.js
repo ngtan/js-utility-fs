@@ -67,7 +67,7 @@ function getNameInWeek(day) {
  */
 function getDaysInMonth(year, month) {
   if (!('number' === typeof month && !isNaN(month))) {
-    return -1;
+    throw new TypeError('All arguments must be a number.');
   }
 
   switch (month) {
