@@ -69,6 +69,10 @@ function insertSort(arr) {
   var i, j,
       l, index;
 
+  if ([].constructor !== arr.constructor) {
+    throw new TypeError('Argument must be an array.');
+  }
+
   for (i = 0, l = arr.length; i < l; i++) {
     index = arr[i];
 
